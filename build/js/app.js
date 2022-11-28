@@ -62,6 +62,11 @@ function mostrarImagen (i){
     const overlay = document.createElement('DIV');
     overlay.appendChild(imagen);
     overlay.classList.add('overlay');
+    overlay.onclick = function(){
+        const body = document.querySelector('body');
+        body.classList.remove('fijar-body');
+        overlay.remove();
+    }
 
     //Boton para cerrar el modal
     const cerarModal = document.createElement('P');
